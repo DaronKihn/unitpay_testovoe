@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unitpay_testovoe/components/body.dart';
 import 'package:unitpay_testovoe/components/custom_icon_button.dart';
 import 'bloc/product_bloc.dart';
-import 'constants.dart';
+import 'theme_constants.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -22,10 +22,11 @@ class HomeScreen extends StatelessWidget {
         centerTitle: false,
         actions: <Widget>[
           CustomIconButton(
-              icon: Icons.add,
-              onPress: () {
-                BlocProvider.of<ProductBloc>(context).add(AddProduct());
-              }),
+            icon: Icons.add,
+            onPress: () {
+              BlocProvider.of<ProductBloc>(context).add(AddProduct());
+            },
+          ),
         ],
       ),
       body: SafeArea(

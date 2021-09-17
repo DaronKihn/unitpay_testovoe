@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unitpay_testovoe/bloc/product_bloc.dart';
 import 'package:unitpay_testovoe/components/product_card.dart';
-import 'package:unitpay_testovoe/constants.dart';
+import 'package:unitpay_testovoe/theme_constants.dart';
 
 class Body extends StatelessWidget {
   Body({Key? key}) : super(key: key);
@@ -29,9 +29,10 @@ class Body extends StatelessWidget {
             );
           }
           return Center(
-              child: CircularProgressIndicator(
-            color: kTextColor,
-          ));
+            child: CircularProgressIndicator(
+              color: kTextColor,
+            ),
+          );
         },
       ),
     );

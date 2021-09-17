@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unitpay_testovoe/bloc/product_bloc.dart';
 import 'package:unitpay_testovoe/components/custom_icon_button.dart';
 import 'package:unitpay_testovoe/models/item.dart';
-import '../constants.dart';
+import '../theme_constants.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key, required product, required index})
@@ -47,12 +47,13 @@ class ProductCard extends StatelessWidget {
           Align(
             alignment: Alignment.topRight,
             child: CustomIconButton(
-                icon: Icons.delete,
-                onPress: () {
-                  BlocProvider.of<ProductBloc>(context)
-                      .add(DeleteProduct(_index));
-                }),
-          )
+              icon: Icons.delete,
+              onPress: () {
+                BlocProvider.of<ProductBloc>(context)
+                    .add(DeleteProduct(_index));
+              },
+            ),
+          ),
         ],
       ),
     );
